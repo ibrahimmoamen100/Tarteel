@@ -174,7 +174,7 @@ function Footer() {
           <div className="bg-darkMain">
             <div className="container px-5 py-4 mx-auto">
               <p className="text-sm text-lightMain capitalize xl:text-center">
-                © 2020 All rights reserved by Ibrahim Moamen
+                © 2024 All rights reserved by Ibrahim Moamen
               </p>
             </div>
           </div>

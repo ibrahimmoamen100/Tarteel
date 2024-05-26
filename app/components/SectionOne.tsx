@@ -4,6 +4,7 @@ import { Boxes } from "@/components/ui/background-boxes";
 import { cn } from "@/lib/utils";
 import { TypewriterEffectSmoothDemo } from "./Typer";
 import { FlipWords } from "@/components/ui/flip-words";
+import Link from "next/link";
 
 export function BackgroundBoxesDemo() {
   const words = ["Read", "Write", "Tajweed", "Fiqh"];
@@ -23,9 +24,12 @@ export function BackgroundBoxesDemo() {
         <button className="w-40 h-10 rounded-xl bg-primaryMain border dark:border-white border-transparent text-white text-sm">
           Join now
         </button>
-        <button className="w-40 h-10 rounded-xl bg-lightMain text-black border border-black  text-sm">
+        <Link
+          href="sign/"
+          className="w-40 h-10 rounded-xl text-center flex justify-center items-center bg-lightMain text-black border border-black  text-sm"
+        >
           Signup
-        </button>
+        </Link>
       </div>
     </div>
   );
