@@ -6,7 +6,7 @@ import { TracingBeam } from "@/components/ui/tracing-beam";
 
 function home() {
   return (
-    <div className="h-[5000px]">
+    <div className="">
       <BackgroundBoxesDemo />
     </div>
   );
