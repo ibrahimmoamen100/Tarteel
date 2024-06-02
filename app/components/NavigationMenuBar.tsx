@@ -4,6 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import logo from "@/public/images/tarteel.png";
 import { cn } from "@/lib/utils";
+import { MenuNavbar } from "./MenuNavbar";
 import Image from "next/image";
 import {
   NavigationMenu,
@@ -45,10 +46,9 @@ const components: { title: string; href: string; description: string }[] = [
       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
   },
   {
-    title: "Tooltip",
+    title: " Quranic Arabic ",
     href: "/docs/primitives/tooltip",
-    description:
-      "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
+    description: " Quranic Arabic ",
   },
 ];
 
@@ -59,7 +59,9 @@ export function NavigationMenuBar() {
         <Link href={"/"}>
           <Image src={logo} alt="logo" width={120} height={120} />
         </Link>
-        <div className="flex sm:hidden"></div>
+        <div className="flex sm:hidden">
+          <MenuNavbar />
+        </div>
         <NavigationMenu className="hidden sm:flex flex-row items-center justify-between">
           <NavigationMenuList className="flex sm:flex-row flex-col">
             <NavigationMenuItem className="hover:bg-transparent  ">
@@ -104,7 +106,7 @@ export function NavigationMenuBar() {
                 Our Programmes
               </NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[350px] gap-3 p-4 md:w-[400px] lg:grid-cols-2 lg:w-[500px] ">
+                <ul className="grid w-[350px] gap-3 p-4 md:w-[400px]  lg:grid-cols-2 lg:w-[500px] ">
                   {components.map((component) => (
                     <ListItem
                       key={component.title}

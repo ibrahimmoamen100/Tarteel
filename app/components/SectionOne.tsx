@@ -7,7 +7,7 @@ import { FlipWords } from "@/components/ui/flip-words";
 import Link from "next/link";
 
 export function BackgroundBoxesDemo() {
-  const words = ["Read", "Write", "Tajweed", "Fiqh"];
+  const words = ["Read", "Write", "Tajweed", "Fiqh", "Ahkaam"];
 
   return (
     <div className="h-[80vh]  relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
@@ -16,7 +16,8 @@ export function BackgroundBoxesDemo() {
       <div className="">
         <TypewriterEffectSmoothDemo />
       </div>
-      <div className="text-xl text-white">
+      <div className="text-xl text-lightMain">
+        we teaching
         <FlipWords words={words} /> <br />
       </div>
 

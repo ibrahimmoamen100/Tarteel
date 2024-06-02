@@ -30,6 +30,8 @@ const config = {
         background: "hsl(var(--background))",
         darkMain: "#2d1427",
         lightMain: "#e6d5bd",
+        lighterMain: "#dfd9d0",
+
         secondMain: "#ECB176",
         primaryMain: "#A67B5B",
 
