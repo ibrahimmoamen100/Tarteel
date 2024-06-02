@@ -20,34 +20,34 @@ import prayer from "@/public/images/1.jpg";
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "For Kids",
-    href: "/docs/primitives/alert-dialog",
+    href: "/programmes",
     description:
       "Teaching kids specifically how to read, write, and memorize the Quran",
   },
   {
     title: "For Aduls",
-    href: "/docs/primitives/hover-card",
+    href: "/programmes",
     description: "Teaching Aduls how to read, write, and memorize the Quran",
   },
   {
     title: "For Women",
-    href: "/docs/primitives/progress",
+    href: "/programmes",
     description: "Female teachers dedicated to teaching women",
   },
   {
     title: " Ijazah course ",
-    href: "/docs/primitives/scroll-area",
+    href: "/programmes",
     description: " The type of Ijazah that we giving to our Students ",
   },
   {
     title: "Tabs",
-    href: "/docs/primitives/tabs",
+    href: "/programmes",
     description:
       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
   },
   {
     title: " Quranic Arabic ",
-    href: "/docs/primitives/tooltip",
+    href: "/programmes",
     description: " Quranic Arabic ",
   },
 ];

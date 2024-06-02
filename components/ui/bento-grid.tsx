@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 import Image from "next/image";
 
 export const BentoGrid = ({
@@ -32,9 +33,10 @@ export const BentoGridItem = ({
   src?: string | any;
 }) => {
   return (
-    <div
+    <Link
+      href="/programmes"
       className={cn(
-        "row-span-1  bg-lighterMain rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-2 dark:bg-black dark:border-white/[0.2]  border border-transparent justify-around items-start flex flex-col space-y-2",
+        "row-span-1  bg-lightMain rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-2 dark:bg-black dark:border-white/[0.2]  border border-transparent justify-around items-start flex flex-col space-y-2",
         className
       )}
     >
@@ -51,6 +53,6 @@ export const BentoGridItem = ({
           {description}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
