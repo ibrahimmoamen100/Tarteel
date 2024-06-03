@@ -22,14 +22,17 @@ export function BackgroundBoxesDemo() {
       </div>
 
       <div className="flex flex-col md:flex-row space-y-4 py-4 md:space-y-0 space-x-0 md:space-x-4">
-        <button className="w-40 h-10 rounded-xl bg-primaryMain border dark:border-white border-transparent text-white text-sm">
-          Join now
-        </button>
         <Link
-          href="sign/"
+          href={"login/"}
+          className="w-40 h-10 rounded-xl bg-primaryMain border dark:border-white flex justify-center items-center items-center border-transparent text-white text-sm"
+        >
+          Login
+        </Link>
+        <Link
+          href={"register/"}
           className="w-40 h-10 rounded-xl text-center flex justify-center items-center bg-lightMain text-black border border-black  text-sm"
         >
-          Signup
+          Register
         </Link>
       </div>
     </div>

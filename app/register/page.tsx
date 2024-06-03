@@ -1,7 +1,7 @@
 import React from "react";
 import { SignupFormDemo } from "../components/SignCom";
 
-function sign() {
+function register() {
   return (
     <div>
       <div className="p-4">
@@ -11,4 +11,4 @@ function sign() {
   );
 }
 
-export default sign;
+export default register;
