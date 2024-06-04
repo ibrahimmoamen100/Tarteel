@@ -88,3 +88,13 @@
   background-position: center;
   background-size: cover;
 }
+
+input[type="email"]:disabled,
+input[type="password"]:disabled,
+input[type="text"]:disabled {
+  @apply: bg-gray-300;
+}
+
+button[type="submit"]:disabled {
+  @apply: bg-gray-300 cursor-not-allowed;
+}

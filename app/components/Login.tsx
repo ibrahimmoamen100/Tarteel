@@ -12,24 +12,32 @@ import {
 export function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const [userCreated, setUserCreated] = useState(false);
+  const [creatingUser, setCreatingUser] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     console.log(`this your email ${email} and this your password ${password}`);
 
-    fetch("/api/register", {
+    await fetch("/api/register", {
       method: "POST",
       body: JSON.stringify({ email, password }),
       headers: {
         "Content-Type": "application/json",
       },
     });
-  };
+  }
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         Tarteel Academy Login
       </h2>
 
+      {userCreated && (
+        <div className="text-center text-green-700">
+          User Created now you can login
+        </div>
+      )}
       <form className="my-8" onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
@@ -40,6 +48,7 @@ export function LoginForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            disabled={creatingUser}
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
@@ -51,12 +60,14 @@ export function LoginForm() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            disabled={creatingUser}
           />
         </LabelInputContainer>
 
         <button
           className="bg-gradient-to-br relative group/btn from-darkMain dark:from-lightMain dark:to-secondMain to-secondMain block dark:bg-primaryMain w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
+          disabled={creatingUser}
         >
           Login &rarr;
           <BottomGradient />
