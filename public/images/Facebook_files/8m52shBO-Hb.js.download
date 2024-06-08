@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("AdsOsmipChatConstants.react",["fbt"],(function(a,b,c,d,e,f,g,h){a=h._("__JHASH__gIfOOQ2_f96__JHASH__");b={id:"adsAIFeedbackSubmissionSucceededCard",cardType:"success",canDismiss:!0,onDismiss:function(){},header:a,dismissTimer:5e3};c=h._("__JHASH__MTW20M_vOvu__JHASH__");d=h._("__JHASH__4U5hkkYl6y5__JHASH__");g.feedbackSubmissionSuccessTitle=a;g.feedbackSubmissionSuccessCard=b;g.writeMessage=c;g.newChat=d}),226);

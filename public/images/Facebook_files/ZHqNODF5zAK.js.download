@@ -1,0 +1,3 @@
+;/*FB_PKG_DELIM*/
+
+__d("AdsToastCardsAddReducerPlugin",[],(function(a,b,c,d,e,f){"use strict";a={reduce:function(a,b){var c=b.toastCard,d=b.dismissUseCase;b=d?a.filter(function(a){return a.id===c.id||a.useCase!==d}):a;return b.some(function(a){return a.id===c.id})?b.map(function(a){return a.id===c.id?c:a}):b.concat([c])}};b=a;f["default"]=b}),66);

@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { NavigationMenuBar } from "./components/NavigationMenuBar";
 import TopNavigation from "./components/TopNavigation";
 import Footer from "./components/Footer";
+import BaseNavbar from "./components/BaseNavbar";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -30,7 +30,7 @@ export default function RootLayout({
       >
         <TopNavigation />
 
-        <NavigationMenuBar />
+        <BaseNavbar />
         {children}
         <Footer />
       </body>

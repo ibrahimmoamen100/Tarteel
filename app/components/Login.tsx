@@ -1,8 +1,11 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
+import { signIn as nextAuthSignIn } from "next-auth/react";
+import googleIcon from "@/public/images/google-icon.png";
 import {
   IconBrandFacebook,
   IconBrandGoogle,
@@ -10,34 +13,21 @@ import {
 } from "@tabler/icons-react";
 
 export function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [userCreated, setUserCreated] = useState(false);
-  const [creatingUser, setCreatingUser] = useState(false);
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [loginInPrograss, setLoginInPrograss] = React.useState(false);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(`this your email ${email} and this your password ${password}`);
-
-    await fetch("/api/register", {
-      method: "POST",
-      body: JSON.stringify({ email, password }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-  }
+    // setLoginInPrograss(true);
+    nextAuthSignIn("credentials", { email, password });
+    // setLoginInPrograss(false);
+  };
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         Tarteel Academy Login
       </h2>
 
-      {userCreated && (
-        <div className="text-center text-green-700">
-          User Created now you can login
-        </div>
-      )}
       <form className="my-8" onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
@@ -46,9 +36,9 @@ export function LoginForm() {
             placeholder="firstname@gmail.com"
             type="email"
             value={email}
+            name="email"
             onChange={(e) => setEmail(e.target.value)}
-            required
-            disabled={creatingUser}
+            disabled={loginInPrograss}
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
@@ -57,17 +47,16 @@ export function LoginForm() {
             id="password"
             placeholder="••••••••"
             type="password"
+            name="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
-            disabled={creatingUser}
+            disabled={loginInPrograss}
           />
         </LabelInputContainer>
 
         <button
-          className="bg-gradient-to-br relative group/btn from-darkMain dark:from-lightMain dark:to-secondMain to-secondMain block dark:bg-primaryMain w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+          className="bg-gradient-to-br relative group/btn bg-lightMain w-full text-darkMain rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
           type="submit"
-          disabled={creatingUser}
         >
           Login &rarr;
           <BottomGradient />
@@ -77,13 +66,15 @@ export function LoginForm() {
 
         <div className="flex flex-col space-y-4">
           <button
-            className=" relative group/btn flex space-x-2 items-center justify-start px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
+            onClick={() => nextAuthSignIn("google")}
+            className=" relative group/btn flex space-x-2  items-center justify-center  px-4 w-full text-black rounded-md h-10 font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)]"
             type="submit"
           >
-            <IconBrandGoogle className="h-4 w-4 text-neutral-800 dark:text-neutral-300" />
-            <span className="text-neutral-700 dark:text-neutral-300 text-sm">
+            <Image src={googleIcon} alt="google" width={24} height={24} />
+            <span className="text-neutral-700 dark:text-neutral-300 text-sm justify-self-start">
               Google
             </span>
+
             <BottomGradient />
           </button>
         </div>

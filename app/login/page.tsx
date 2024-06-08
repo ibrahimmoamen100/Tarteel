@@ -1,8 +1,13 @@
 import React from "react";
 
 import { LoginForm } from "../components/Login";
+import { title } from "process";
 
-function page() {
+export const metadata = {
+  title: "Login",
+};
+
+function Login() {
   return (
     <div>
       <LoginForm />
@@ -10,4 +15,4 @@ function page() {
   );
 }
 
-export default page;
+export default Login;

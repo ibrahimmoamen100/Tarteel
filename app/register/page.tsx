@@ -1,11 +1,15 @@
 import React from "react";
-import { SignupFormDemo } from "../components/SignCom";
+import { RegisterForm } from "../components/SignCom";
 
+export const metadata = {
+  title: "Register",
+  root: "Register",
+};
 function register() {
   return (
     <div>
       <div className="p-4">
-        <SignupFormDemo />
+        <RegisterForm />
       </div>
     </div>
   );

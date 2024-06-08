@@ -1,16 +1,28 @@
 import {Schema,models,model} from 'mongoose'
 import bcrypt from 'bcrypt'
 const UserSchema = new Schema({
+
+  firstName: {
+    type: String,
+    required: true
+  },
+  lastName: {
+    type: String,
+    required: true
+  },
     email: {
         type: String,
         required: true,
         unique: true
     },
     password: {
-        type: String,
+
+       type: String,
         required: true,
-        validate: pass => {
-          if (!pass?.length || pass.length < 8  )  {
+        validate:  pass => {
+
+
+           if (!pass?.length || pass.length < 8  )  {
             throw new Error('Password must be at least 8 characters')
           }
         }

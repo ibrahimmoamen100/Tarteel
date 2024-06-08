@@ -16,6 +16,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import prayer from "@/public/images/1.jpg";
+import GetSession from "./GetSession";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -52,7 +53,7 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
-export function NavigationMenuBar() {
+export function NavigationMenuBar(props: any): React.JSX.Element {
   return (
     <div className=" bg-lightMain">
       <div className="container max-w-4xl flex flex-row  sm:flex-col lg:flex-row items-center justify-between px-4 py-2 md:px-8">
@@ -70,22 +71,7 @@ export function NavigationMenuBar() {
               </NavigationMenuTrigger>
               <NavigationMenuContent className="z-40">
                 <ul className=" grid gap-3 z-40 p-2 lg:p-4 md:w-[300px] lg:w-[400px] lg:grid-cols-[.75fr_1fr]">
-                  <li className="row-span-3 prayer-image  bg-[#faeec9] relative">
-                    <div className="absolute w-[285px]  h-[135px] lg:w-[152px] lg:h-[246px] bg-[#02081763] top-0 right-0 z-0"></div>
-                    <NavigationMenuLink asChild>
-                      <a
-                        className="prayer-image   flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                        href="/"
-                      >
-                        <div className="mb-2 mt-4  font-bold  text-lg text-lightMain z-10 ">
-                          Our Programmes In Class
-                        </div>
-                        <p className="text-sm leading-tight text-wihte text-muted-foreground">
-                          Explore Islam: Beliefs, Practices, and History
-                        </p>
-                      </a>
-                    </NavigationMenuLink>
-                  </li>
+                  <li className="row-span-3 prayer-image  bg-[#faeec9] relative"></li>
                   <ListItem href="/docs" title="Nour Al Bayan">
                     Teaching Nour AL Bayan
                   </ListItem>
@@ -139,6 +125,8 @@ export function NavigationMenuBar() {
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
+
+        <div>{props.children}</div>
       </div>
     </div>
   );

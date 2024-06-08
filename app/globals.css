@@ -80,6 +80,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  min-width: 200px;
+  height: auto;
 }
 
 .boy-image {
