@@ -1,3 +1,0 @@
-;/*FB_PKG_DELIM*/
-
-__d("MWPStableImageContainer.react",["react","stylex"],(function(a,b,c,d,e,f,g){"use strict";var h,i,j=i||(i=d("react")),k=i.useMemo;function a(a){var b=a.aspectRatio,d=a.children,e=a.height,f=a.maxHeight,g=a.maxWidth;a.width;a=a.xstyle;d=(d=d)!=null?d:null;var i=k(function(){if(b!=null&&e!=null)return{maxWidth:"100%",width:(b*Math.min(f,e)).toString()+"px"}},[b,e,f]),l=k(function(){if(g!=null)return{maxWidth:g.toString()+"px"}},[g]);return j.jsx("div",{className:"x193iq5w",children:j.jsx("div",{style:l,children:j.jsx("div",{className:(h||(h=c("stylex")))(a),style:i,children:d})})})}a.displayName=a.name+" [from "+f.id+"]";g["default"]=a}),98);

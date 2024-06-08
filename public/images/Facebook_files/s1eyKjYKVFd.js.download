@@ -1,3 +1,0 @@
-;/*FB_PKG_DELIM*/
-
-__d("HideXoutAction",["fbt","requireDeferred"],(function(a,b,c,d,e,f,g,h){"use strict";var i=c("requireDeferred")("CometFeedStoryExecuteNFXActionMutation").__setRef("HideXoutAction"),j=c("requireDeferred")("cometPushToast").__setRef("HideXoutAction");function a(a,b,c,d){i.onReady(function(e){e.commit(c,a,{canShowCurationFlow:(e=b)!=null?e:!1,feedUnitID:d,onError:function(a){j.onReady(function(a){a=a.cometPushToast;a({message:h._("__JHASH__mx-0GpuhDfw__JHASH__")},4e3)})}})})}g.hide=a}),226);

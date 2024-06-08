@@ -1,3 +1,0 @@
-;/*FB_PKG_DELIM*/
-
-__d("ifRequired_FOR_LAMINAR_CODEGEN",["ifRequired"],(function(a,b,c,d,e,f,g){"use strict";g["default"]=c("ifRequired")}),98);
