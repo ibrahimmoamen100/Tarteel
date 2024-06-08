@@ -23,16 +23,10 @@ async function GetSession() {
       ) : (
         <div className="sm:flex flex-row items-center justify-between gap-2  hidden ">
           <Link
-            className="bg-transparent border-2 border-darkMain p-2 rounded-md"
+            className="bg-darkMain font-semibold text-lightMain border-2 border-darkMain py-1 px-4 rounded-md hover:bg-transparent hover:text-darkMain duration-100 transtion-bg"
             href={"/login"}
           >
-            Login
-          </Link>
-          <Link
-            className="bg-darkMain text-lightMain p-2 flex justify-center items-center rounded-md bg-gradient-to-r from-primaryMain to-darkMain"
-            href={"/register"}
-          >
-            Register
+            Sign Up
           </Link>
         </div>
       )}

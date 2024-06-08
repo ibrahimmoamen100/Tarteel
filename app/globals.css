@@ -100,3 +100,26 @@ input[type="text"]:disabled {
 button[type="submit"]:disabled {
   @apply: bg-gray-300 cursor-not-allowed;
 }
+
+.sign-btn {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  @apply bg-secondMain text-darkMain font-semibold;
+}
+.sign-btn::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+  right: 100%;
+  transition: right 0.2s ease-in-out;
+  @apply bg-lightMain absolute rounded-xl;
+}
+
+.sign-btn:hover.sign-btn::after {
+  content: "";
+  right: 0;
+  transition: right 0.2s ease-in-out;
+}

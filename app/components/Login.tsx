@@ -23,47 +23,15 @@ export function LoginForm() {
     // setLoginInPrograss(false);
   };
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
-      <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
+    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl mt-16 p-4 md:p-8 shadow-input bg-white dark:bg-black">
+      <h2 className="font-bold text-xl text-center text-darkMain dark:text-neutral-200">
         Tarteel Academy Login
       </h2>
-
-      <form className="my-8" onSubmit={handleSubmit}>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
-          <Input
-            id="email"
-            placeholder="firstname@gmail.com"
-            type="email"
-            value={email}
-            name="email"
-            onChange={(e) => setEmail(e.target.value)}
-            disabled={loginInPrograss}
-          />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="password">Password</Label>
-          <Input
-            id="password"
-            placeholder="••••••••"
-            type="password"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            disabled={loginInPrograss}
-          />
-        </LabelInputContainer>
-
-        <button
-          className="bg-gradient-to-br relative group/btn bg-lightMain w-full text-darkMain rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
-          type="submit"
-        >
-          Login &rarr;
-          <BottomGradient />
-        </button>
-
-        <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
-
+      <form className="my-4" onSubmit={handleSubmit}>
+        <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-4 h-[1px] w-full" />
+        <p className="text-center py-4 text-sm text-darkMain">
+          Sign in with our provider Google
+        </p>
         <div className="flex flex-col space-y-4">
           <button
             onClick={() => nextAuthSignIn("google")}

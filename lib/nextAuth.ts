@@ -43,13 +43,17 @@ export const authOptions: AuthOptions = {
     async session(params: { session: Session; user: User | AdapterUser }) {
       const { session, user } = params;
       console.log(session, user);
+      return {
+        ...session,
+        redirectTo: "/",
+      };
       return session;
     },
   },
   secret: process.env.SECRET as string,
   pages: {
     signIn: "/login",
-    signOut: "/login",
+    // signOut: "/login",
     error: "/error",
     verifyRequest: "/verify-request",
     newUser: "/new-user",
