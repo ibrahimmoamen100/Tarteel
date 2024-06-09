@@ -110,7 +110,7 @@ export function NavigationMenuBar(props: any): React.JSX.Element {
                 <NavigationMenuLink
                   className={`bg-transparent + ${navigationMenuTriggerStyle()}`}
                 >
-                  Documentation
+                  Pricing
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
