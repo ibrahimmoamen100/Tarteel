@@ -126,7 +126,7 @@ export function NavigationMenuBar(props: any): React.JSX.Element {
           </NavigationMenuList>
         </NavigationMenu>
 
-        <div>{props.children}</div>
+        <div className="hidden sm:flex">{props.children}</div>
       </div>
     </div>
   );

@@ -10,28 +10,25 @@ function TopNavigation() {
         <Link
           className="flex flex-row  items-center hover:text-secondMain transition hover:scale-[1.1]  duration-300 ease-in-out"
           href={`https://wa.me/${whatsappNumber}`}
+          target="_blank"
         >
           <SiWhatsapp />
           <span> +201024911062</span>
         </Link>
         <div className="flex flex-row justify-center items-center gap-4">
           <Link
-            href=""
+            target="_blank"
+            href="https://www.facebook.com/groups/780287830950110"
             className="text-2xl hover:text-secondMain transition hover:scale-[1.2]  duration-300 ease-in-out"
           >
             <SiFacebook />
           </Link>
           <Link
-            href=""
+            target="_blank"
+            href="https://www.youtube.com/@ibrahim.moamen4508/videos"
             className="text-2xl hover:text-secondMain transition hover:scale-[1.2]  duration-300 ease-in-out"
           >
             <SiYoutube />
-          </Link>
-          <Link
-            href=""
-            className="text-2xl hover:text-secondMain transition hover:scale-[1.2]  duration-300 ease-in-out"
-          >
-            <SiInstagram />
           </Link>
         </div>
       </div>

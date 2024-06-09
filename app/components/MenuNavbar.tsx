@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/sheet";
 import Link from "next/link";
 import { BsList } from "react-icons/bs";
+import GetSession from "./GetSession";
 
 export function MenuNavbar() {
   return (
@@ -22,14 +23,7 @@ export function MenuNavbar() {
           <BsList className="text-xl  " />
         </Button>
       </SheetTrigger>
-      <SheetContent className=" flex flex-col  text-center sm:text-left ">
-        <Link
-          className="p-2 font-semibold  border-darkMain  border-2 rounded-lg hover:bg-darkMain hover:text-lightMain"
-          href={"/"}
-        >
-          Home
-        </Link>
-
+      <SheetContent className=" flex flex-col py-12 text-center sm:text-left ">
         <Link
           className="p-2 font-semibold  border-darkMain  border-2 rounded-lg hover:bg-darkMain hover:text-lightMain"
           href={"/"}

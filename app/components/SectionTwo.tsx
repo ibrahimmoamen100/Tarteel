@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import boy from "@/public/images/reading quran.jpeg";
+import { MovingBorderDemo } from "./ButtonBorder";
 
 function SectionTwo() {
   return (
@@ -30,9 +31,7 @@ function SectionTwo() {
               through our professional, handpicked Online Arabic and Quran
               Tutors!
             </p>
-            <button className="border-2 border-darkMain p-2 rounded-md">
-              Have A Tour Through Our Courses!
-            </button>
+            <MovingBorderDemo name="Have A Tour Through Our Courses!" />
           </div>
         </div>
       </div>

@@ -17,13 +17,13 @@ import quran from "@/public/images/class.jpeg";
 
 export function BentoGridDemo() {
   return (
-    <div className=" bg-white px-4">
-      <h1 className="md:text-2xl text-xl font-bold text-center px-2 bg-darkMain text-lightMain pt-20 pb-8 rounded-md ">
+    <div className=" bg-white px-0">
+      <h1 className="md:text-2xl text-xl font-bold text-center px-2 bg-darkMain text-lightMain pt-20 pb-8  ">
         Online Arabic and Quran lessons for men, women, and Kids. <br />
         <span> You can explore them.</span>
       </h1>
       <div className=""></div>
-      <BentoGrid className="max-w-7xl mx-auto py-16 ">
+      <BentoGrid className="max-w-7xl mx-auto pt-20 ">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
