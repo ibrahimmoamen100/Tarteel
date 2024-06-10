@@ -5,7 +5,7 @@ import Link from "next/link";
 import SignUpBtn from "./SignUpBtn";
 
 export function BackgroundBoxesDemo() {
-  const words = ["Read", "Write", "Tajweed", "Fiqh", "Ahkaam"];
+  const words = ["Reading", "Writing", "Tajweed", "Fiqh", "Ahkaam"];
 
   return (
     <div className="h-[80vh]  relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">

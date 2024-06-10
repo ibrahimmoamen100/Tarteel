@@ -19,7 +19,7 @@ export function LoginForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // setLoginInPrograss(true);
-    nextAuthSignIn("credentials", { email, password });
+    // nextAuthSignIn("credentials", { email, password });
     // setLoginInPrograss(false);
   };
   return (

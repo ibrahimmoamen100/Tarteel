@@ -30,7 +30,6 @@ const AvatarDropdown = ({
             height={40}
             className="rounded-full object-cover"
           />
-          <span className="text-sm font-medium">{name}</span>
         </div>
       </Menu.Button>
 
@@ -38,6 +37,12 @@ const AvatarDropdown = ({
         as="ul"
         className="absolute mt-2 shadow-lg bg-white rounded-md w-48 z-50"
       >
+        <Menu.Item>
+          <span className="text-sm relative block font-medium text-center p-2 bg-darkMain text-white w-100">
+            {name}
+          </span>
+        </Menu.Item>
+
         {links.map((link) => (
           <Menu.Item key={link.href}>
             <Link

@@ -9,20 +9,21 @@ import NextAuth, {
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { AdapterUser } from "next-auth/adapters";
+import { Console } from "console";
 export const authOptions: AuthOptions = {
   providers: [
-    CredentialsProvider({
-      name: "Credentials",
-      credentials: {
-        username: { label: "Username", type: "text", placeholder: "jsmith" },
-        password: { label: "Password", type: "password" },
-      },
-      async authorize(credentials, req) {
-        console.log(credentials);
+    // CredentialsProvider({
+    //   name: "Credentials",
+    //   credentials: {
+    //     username: { label: "Username", type: "text", placeholder: "jsmith" },
+    //     password: { label: "Password", type: "password" },
+    //   },
+    //   async authorize(credentials, req) {
+    //     console.log(credentials);
 
-        return null;
-      },
-    }),
+    //     return null;
+    //   },
+    // }),
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
@@ -45,9 +46,21 @@ export const authOptions: AuthOptions = {
       console.log(session, user);
       return {
         ...session,
-        redirectTo: "/",
+        redirectTo:
+          process.env.NODE_ENV === "production"
+            ? `${process.env.NEXTAUTH_URL}/home`
+            : "/home", // Adjust for production vs. development
       };
       return session;
+    },
+    async redirect({ url, baseUrl }: { url: string; baseUrl: string }) {
+      url = "/";
+      // Allows relative callback URLs
+      console.log(url, baseUrl);
+      if (url.startsWith("/")) return `${baseUrl}${url}`;
+      // Allows callback URLs on the same origin
+      else if (new URL(url).origin === baseUrl) return url;
+      return baseUrl;
     },
   },
   secret: process.env.SECRET as string,
