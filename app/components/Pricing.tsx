@@ -3,6 +3,18 @@ import { PiCaretCircleRightFill } from "react-icons/pi";
 
 const cards = [
   {
+    id: "1",
+    title: "Free",
+    description: "For the first 1000 users",
+    price: "30",
+    item1: "8 sessions per month",
+    item2: "60 min session duration",
+    item3: " 1000 words per month",
+    item4: " 1000 words per month",
+  },
+  {
+    id: "2",
+
     title: "Free",
     description: "For the first 1000 users",
     price: "0",
@@ -12,6 +24,8 @@ const cards = [
     item4: " 1000 words per month",
   },
   {
+    id: "3",
+
     title: "Free",
     description: "For the first 1000 users",
     price: "0",
@@ -21,15 +35,8 @@ const cards = [
     item4: " 1000 words per month",
   },
   {
-    title: "Free",
-    description: "For the first 1000 users",
-    price: "0",
-    item1: "8 sessions per month",
-    item2: "60 min session duration",
-    item3: " 1000 words per month",
-    item4: " 1000 words per month",
-  },
-  {
+    id: "4",
+
     title: "Free",
     description: "For the first 1000 users",
     price: "0",
@@ -58,7 +65,10 @@ const Pricing = () => {
           <div className="grid gap-4 mt-16 -mx-6 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {cards.map((el) => {
               return (
-                <div className="px-6 py-4 transition-colors duration-200 transform rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700">
+                <div
+                  key={el.id}
+                  className="px-6 py-4 transition-colors duration-200 transform rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700"
+                >
                   <p className="text-lg font-medium text-darkMain dark:text-gray-100">
                     {el.title}
                   </p>
