@@ -17,7 +17,7 @@ import quran from "@/public/images/class.jpeg";
 
 export function BentoGridDemo() {
   return (
-    <div className=" bg-white px-0">
+    <div className=" bg-lighterMain py-14">
       <h1 className="md:text-2xl text-xl font-bold text-center px-2 bg-darkMain text-lightMain pt-20 pb-8  ">
         Online Arabic and Quran lessons for men, women, and Kids. <br />
         <span> You can explore them.</span>
@@ -46,20 +46,20 @@ const items = [
     description:
       "Learn Arabic online at your own pace with our 16-level course, featuring 400+ hours of one-on-one sessions. Improve your skills with interactive tools and expert tutors.",
     src: teacher,
-    icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    icon: <IconClipboardCopy className="h-4 w-4 text-darkMain" />,
   },
   {
     title: "Online Quran With Tajweed Course",
     description:
       "This course teaches the Quran to non-Arabic speakers worldwide, includes Tajweed lessons, and is taught by Ijazah certified teachers over 13 levels.",
     src: quran,
-    icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    icon: <IconFileBroken className="h-4 w-4 text-darkMain" />,
   },
   {
     title: "Online Arabic Course For Kids",
     description:
       "This 24-level online Arabic course for kids, taught by specialized teachers, covers Primary, Intermediate, and Secondary stages in fun, child-friendly sessions.",
     src: kids,
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
+    icon: <IconSignature className="h-4 w-4 text-darkMain" />,
   },
 ];

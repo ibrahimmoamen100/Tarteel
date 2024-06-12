@@ -6,14 +6,17 @@ export default withAuth(
   async function middleware(req: NextRequest) {
     const pathname = req.nextUrl.pathname;
     const isAuth = await getToken({ req: req });
-    const protectedRoutes = ["/", "/register", "/login"];
-    const isAuthRoute = pathname.startsWith("/auth/login");
+    const protectedRoutes = ["/login"];
+    const isAuthRoute = pathname.startsWith("/login");
     const isProtectedRoutes = protectedRoutes.some((route) =>
       pathname.startsWith(route)
     );
 
     if (!isAuth && isProtectedRoutes) {
       return NextResponse.redirect(new URL("/login", req.url));
+    }
+    if (isAuthRoute && isAuth) {
+      return NextResponse.redirect(new URL("/profile", req.url));
     }
   },
   {

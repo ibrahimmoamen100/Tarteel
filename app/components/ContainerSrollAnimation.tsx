@@ -6,7 +6,7 @@ import imageee from "@/public/images/figma.png";
 
 export function HeroScroll() {
   return (
-    <div className="flex flex-col overflow-hidden">
+    <div className="flex flex-col overflow-hidden bg-lightMain  ">
       <ContainerScroll
         titleComponent={
           <>
