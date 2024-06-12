@@ -54,7 +54,6 @@ export const authOptions: AuthOptions = {
       return session;
     },
     async redirect({ url, baseUrl }: { url: string; baseUrl: string }) {
-      url = "/";
       // Allows relative callback URLs
       console.log(url, baseUrl);
       if (url.startsWith("/")) return `${baseUrl}${url}`;
