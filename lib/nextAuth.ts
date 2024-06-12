@@ -48,12 +48,13 @@ export const authOptions: AuthOptions = {
         ...session,
         redirectTo:
           process.env.NODE_ENV === "production"
-            ? `${process.env.NEXTAUTH_URL}/home`
-            : "/home", // Adjust for production vs. development
+            ? `/${process.env.NEXTAUTH_URL}`
+            : "/", // Adjust for production vs. development
       };
       return session;
     },
     async redirect({ url, baseUrl }: { url: string; baseUrl: string }) {
+      url = "/";
       // Allows relative callback URLs
       console.log(url, baseUrl);
       if (url.startsWith("/")) return `${baseUrl}${url}`;
