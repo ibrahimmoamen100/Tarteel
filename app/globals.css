@@ -119,11 +119,25 @@ button[type="submit"]:disabled {
   transition: right 0.2s ease-in-out;
   @apply bg-lightMain absolute rounded-xl;
 }
-
+.sign-btn::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+  left: 100%;
+  transition: right 0.2s ease-in-out;
+  @apply bg-lightMain absolute rounded-xl;
+}
 .sign-btn:hover.sign-btn::after {
   content: "";
   right: 0;
   transition: right 0.2s ease-in-out;
+}
+.sign-btn:hover.sign-btn::before {
+  content: "";
+  left: 0;
+  transition: left 0.2s ease-in-out;
 }
 
 .no-visible-scrollbar {

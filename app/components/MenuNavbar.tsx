@@ -56,34 +56,34 @@ export function MenuNavbar() {
 
         <div className="flex flex-col gap-4">
           <Link
-            className="p-2 font-semibold  border-darkMain  border-2 rounded-xl hover:bg-darkMain hover:text-lightMain"
+            className="p-3 rounded-xl  flex justify-center items-center bg-lightMain text-black border border-black  text-sm sign-btn"
             href={"/"}
           >
-            Home
-          </Link>
-          <Link
-            className="p-2 font-semibold  border-darkMain  border-2 rounded-xl hover:bg-darkMain hover:text-lightMain"
-            href={"/"}
-          >
-            Getting started
-          </Link>
-          <Link
-            className="p-2 font-semibold  border-darkMain  border-2 rounded-xl hover:bg-darkMain hover:text-lightMain"
-            href={"/"}
-          >
-            Our Programmers
-          </Link>
-          <Link
-            className="p-2 font-semibold  border-darkMain  border-2 rounded-xl hover:bg-darkMain hover:text-lightMain"
-            href={"/"}
-          >
-            Documentation
+            <span className="z-10 hover:text-darkMain">Home</span>
           </Link>
           <Link
             className="p-3 rounded-xl  flex justify-center items-center bg-lightMain text-black border border-black  text-sm sign-btn"
             href={"/"}
           >
-            Contact Us
+            <span className="z-10 hover:text-darkMain"> Getting started</span>
+          </Link>
+          <Link
+            className="p-3 rounded-xl  flex justify-center items-center bg-lightMain text-black border border-black  text-sm sign-btn"
+            href={"/"}
+          >
+            <span className="z-10 hover:text-darkMain"> Our Programmers</span>
+          </Link>
+          <Link
+            className="p-3 rounded-xl  flex justify-center items-center bg-lightMain text-black border border-black  text-sm sign-btn"
+            href={"/"}
+          >
+            <span className="z-10 hover:text-darkMain"> Documentation</span>
+          </Link>
+          <Link
+            className="p-3 rounded-xl  flex justify-center items-center bg-lightMain text-black border border-black  text-sm sign-btn"
+            href={"/"}
+          >
+            <span className="z-10 hover:text-darkMain">Contact Us</span>
           </Link>
         </div>
       </SheetContent>
