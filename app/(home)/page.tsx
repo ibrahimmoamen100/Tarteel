@@ -27,7 +27,6 @@ function home() {
       <div className="bg-lighterMain">
         <CardHoverEffectDemo />
       </div>
-      <TabsDemo />
     </div>
   );
 }
