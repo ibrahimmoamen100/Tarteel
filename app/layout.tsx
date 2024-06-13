@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import TopNavigation from "./components/TopNavigation";
 import Footer from "./components/Footer";
 import BaseNavbar from "./components/BaseNavbar";
+import NextAuthProvider from "./providers/NextAuthProvider";
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -28,10 +29,12 @@ export default function RootLayout({
         )}
         suppressHydrationWarning={true}
       >
-        <TopNavigation />
+        <NextAuthProvider>
+          <TopNavigation />
+          <BaseNavbar />
 
-        <BaseNavbar />
-        {children}
+          {children}
+        </NextAuthProvider>
         <Footer />
       </body>
     </html>
