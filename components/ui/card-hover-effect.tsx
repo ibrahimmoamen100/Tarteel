@@ -4,13 +4,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-import { useState } from "react";
+import { Key, useState } from "react";
 
 export const HoverEffect = ({
   items,
   className,
 }: {
   items: {
+    idx: Key | null | undefined;
     title: string;
     description: string;
     link: string;
@@ -29,8 +30,8 @@ export const HoverEffect = ({
     >
       {items.map((item, idx) => (
         <Link
+          key={item?.idx}
           href={item?.link}
-          key={Math.random() * 1000}
           className="relative group  block p-2 h-full w-full"
           onMouseEnter={() => setHoveredIndex(idx)}
           onMouseLeave={() => setHoveredIndex(null)}

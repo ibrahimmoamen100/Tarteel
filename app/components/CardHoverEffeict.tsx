@@ -7,11 +7,13 @@ export function CardHoverEffectDemo() {
   return (
     <div className="max-w-7xl mx-auto py-24">
       <h1 className="md:text-4xl text-2xl  text-center text-darkMain py-8 font-bold font-[Poppins] block m-auto  max-w-xl ">
-        We Provides a Comfortable Learning Environment
+        Comfortable Learning Environment
         <span className="w-56 h-2 bg-secondMain block mx-auto translate-x-6 border-2 border-ligtherMain"></span>
         <span className="w-56 h-2 bg-secondMain block  mx-auto  border-2 border-ligtherMain"></span>
       </h1>
-      <HoverEffect items={projects} />
+      <HoverEffect
+        items={projects.map((project, idx) => ({ ...project, idx }))}
+      />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { TracingBeamDemo } from "../components/TracingBar";
 
-function Programmes() {
+function page() {
   return (
     <div>
       <TracingBeamDemo />
@@ -9,4 +9,4 @@ function Programmes() {
   );
 }
 
-export default Programmes;
+export default page;

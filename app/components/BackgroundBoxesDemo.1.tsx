@@ -3,8 +3,11 @@ import { TypewriterEffectSmoothDemo } from "./Typer";
 import { FlipWords } from "@/components/ui/flip-words";
 import Link from "next/link";
 import SignUpBtn from "./SignUpBtn";
+import { getServerSession } from "next-auth";
+import { authOptions } from "@/lib/nextAuth";
 
-export function BackgroundBoxesDemo() {
+export async function BackgroundBoxesDemo() {
+  const session = await getServerSession(authOptions);
   const words = ["Reading", "Writing", "Tajweed", "Fiqh", "Ahkaam"];
 
   return (
@@ -19,9 +22,18 @@ export function BackgroundBoxesDemo() {
         <span>We Teach</span>
         <FlipWords words={words} /> <br />
       </div>
+
       <div className="flex flex-col items-center gap-4 mt-4 sm:flex-row">
-        <p className="text-lightMain text-md font-bold ">Join us by Sign In</p>
-        <SignUpBtn />
+        {session ? (
+          <div>hello world</div>
+        ) : (
+          <>
+            <p className="text-lightMain text-md font-bold ">
+              Join us by Sign In
+            </p>
+            <SignUpBtn />
+          </>
+        )}
       </div>
     </div>
   );

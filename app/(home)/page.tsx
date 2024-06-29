@@ -10,6 +10,12 @@ import Pricing from "../components/Pricing";
 import { CardHoverEffectDemo } from "../components/CardHoverEffeict";
 import { TabsDemo } from "../components/Tabs";
 import { FollowingPointerDemo } from "../components/FollowingPointerDemo";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+// const stripePromise = loadStripe(
+//   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+// );
 
 export const metadata = {
   title: "Home",

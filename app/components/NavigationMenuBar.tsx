@@ -21,34 +21,34 @@ import GetSession from "./GetSession";
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "For Kids",
-    href: "/programmes",
+    href: "programmes",
     description:
       "Teaching kids specifically how to read, write, and memorize the Quran",
   },
   {
     title: "For Aduls",
-    href: "/programmes",
+    href: "programmes",
     description: "Teaching Aduls how to read, write, and memorize the Quran",
   },
   {
     title: "For Women",
-    href: "/programmes",
+    href: "programmes",
     description: "Female teachers dedicated to teaching women",
   },
   {
     title: " Ijazah course ",
-    href: "/programmes",
+    href: "programmes",
     description: " The type of Ijazah that we giving to our Students ",
   },
   {
     title: "Tabs",
-    href: "/programmes",
+    href: "programmes",
     description:
       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
   },
   {
     title: " Quranic Arabic ",
-    href: "/programmes",
+    href: "programmes",
     description: " Quranic Arabic ",
   },
 ];
@@ -72,18 +72,15 @@ export function NavigationMenuBar(props: any): React.JSX.Element {
               <NavigationMenuContent className="z-40">
                 <ul className=" grid gap-3 z-40 p-2 lg:p-4 md:w-[300px] lg:w-[400px] lg:grid-cols-[.75fr_1fr]">
                   <li className="row-span-3 prayer-image  bg-[#faeec9] relative"></li>
-                  <ListItem href="/docs" title="Nour Al Bayan">
+                  <Link href="/programmes" title="Nour Al Bayan">
                     Teaching Nour AL Bayan
-                  </ListItem>
-                  <ListItem href="/docs/installation" title="Installation">
+                  </Link>
+                  <Link href="/programmes" title="Installation">
                     How to install dependencies and structure your app.
-                  </ListItem>
-                  <ListItem
-                    href="/docs/primitives/typography"
-                    title="Typography"
-                  >
+                  </Link>
+                  <Link href="/programmes" title="Typography">
                     Styles for headings, paragraphs, lists...etc
-                  </ListItem>
+                  </Link>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -94,13 +91,15 @@ export function NavigationMenuBar(props: any): React.JSX.Element {
               <NavigationMenuContent>
                 <ul className="grid w-[350px] gap-3 p-4 md:w-[400px]  lg:grid-cols-2 lg:w-[500px] ">
                   {components.map((component) => (
-                    <ListItem
+                    <Link
+                      className=" text-blue-800"
                       key={component.title}
                       title={component.title}
-                      href={component.href}
+                      href={`/${component.href}`}
                     >
+                      {" "}
                       {component.description}
-                    </ListItem>
+                    </Link>
                   ))}
                 </ul>
               </NavigationMenuContent>
