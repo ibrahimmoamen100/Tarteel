@@ -72,13 +72,13 @@ export function NavigationMenuBar(props: any): React.JSX.Element {
               <NavigationMenuContent className="z-40">
                 <ul className=" grid gap-3 z-40 p-2 lg:p-4 md:w-[300px] lg:w-[400px] lg:grid-cols-[.75fr_1fr]">
                   <li className="row-span-3 prayer-image  bg-[#faeec9] relative"></li>
-                  <Link href="/programmes" title="Nour Al Bayan">
+                  <Link href="programmes/" title="Nour Al Bayan">
                     Teaching Nour AL Bayan
                   </Link>
-                  <Link href="/programmes" title="Installation">
+                  <Link href="programmes/" title="Installation">
                     How to install dependencies and structure your app.
                   </Link>
-                  <Link href="/programmes" title="Typography">
+                  <Link href="programmes/" title="Typography">
                     Styles for headings, paragraphs, lists...etc
                   </Link>
                 </ul>
@@ -95,7 +95,7 @@ export function NavigationMenuBar(props: any): React.JSX.Element {
                       className=" text-blue-800"
                       key={component.title}
                       title={component.title}
-                      href={`/${component.href}`}
+                      href={`${component.href}/`}
                     >
                       {" "}
                       {component.description}

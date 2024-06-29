@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
+import { Url } from "url";
 
 export const BentoGrid = ({
   className,
@@ -27,16 +28,18 @@ export const BentoGridItem = ({
   description,
   src,
   icon,
+  link,
 }: {
   className?: string;
   title?: string | React.ReactNode;
   description?: string | React.ReactNode;
   src?: string | any;
   icon?: React.ReactNode;
+  link?: object | Url | string;
 }) => {
   return (
     <Link
-      href={"/programmes"}
+      href={"programmes/"}
       className={cn(
         "row-span-1 prog_card bg-lightMain rounded-xl group/bento hover:shadow-md transition duration-200 shadow-input dark:shadow-none  dark:bg-black dark:border-white/[0.2]  border border-transparent justify-around items-start flex flex-col space-y-4",
         className

@@ -43,6 +43,7 @@ const Skeleton = () => (
 const items = [
   {
     title: "Online Arabic Course",
+    link: "/programmes",
     description:
       "Learn Arabic online at your own pace with our 16-level course, featuring 400+ hours of one-on-one sessions. Improve your skills with interactive tools and expert tutors.",
     src: teacher,
@@ -50,6 +51,8 @@ const items = [
   },
   {
     title: "Online Quran With Tajweed Course",
+    link: "/programmes",
+
     description:
       "This course teaches the Quran to non-Arabic speakers worldwide, includes Tajweed lessons, and is taught by Ijazah certified teachers over 13 levels.",
     src: quran,
@@ -57,6 +60,8 @@ const items = [
   },
   {
     title: "Online Arabic Course For Kids",
+    link: "/programmes",
+
     description:
       "This 24-level online Arabic course for kids, taught by specialized teachers, covers Primary, Intermediate, and Secondary stages in fun, child-friendly sessions.",
     src: kids,
