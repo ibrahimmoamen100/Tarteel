@@ -37,17 +37,18 @@ export const BentoGridItem = ({
   return (
     <Link
       href="/programmes"
+      discount={0.7}
       className={cn(
-        "row-span-1  bg-lightMain rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-2 dark:bg-black dark:border-white/[0.2]  border border-transparent justify-around items-start flex flex-col space-y-2",
+        "row-span-1 prog_card bg-lightMain rounded-xl group/bento hover:shadow-md transition duration-200 shadow-input dark:shadow-none  dark:bg-black dark:border-white/[0.2]  border border-transparent justify-around items-start flex flex-col space-y-4",
         className
       )}
     >
       <Image
         src={src}
         alt="this image"
-        className="  object-fill  w-full h-40"
+        className="  object-fill  w-full h-40 rounded-t-xl"
       />
-      <div className="group-hover/bento:translate-x-2 transition duration-200">
+      <div className="group-hover/bento:translate-x-2 transition duration-200 p-4">
         <div className="font-sans font-bold text-neutral-600 dark:text-neutral-200 mb-2 mt-2">
           {icon}
           {title}
