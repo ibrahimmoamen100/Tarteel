@@ -36,8 +36,7 @@ export const BentoGridItem = ({
 }) => {
   return (
     <Link
-      href="/programmes"
-      discount={0.7}
+      href={"/programmes"}
       className={cn(
         "row-span-1 prog_card bg-lightMain rounded-xl group/bento hover:shadow-md transition duration-200 shadow-input dark:shadow-none  dark:bg-black dark:border-white/[0.2]  border border-transparent justify-around items-start flex flex-col space-y-4",
         className
