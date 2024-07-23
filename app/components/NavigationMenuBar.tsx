@@ -105,7 +105,7 @@ export function NavigationMenuBar(props: any): React.JSX.Element {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link href="/docs" legacyBehavior passHref>
+              <Link href="/register" legacyBehavior passHref>
                 <NavigationMenuLink
                   className={`bg-transparent + ${navigationMenuTriggerStyle()}`}
                 >
