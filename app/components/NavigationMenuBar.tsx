@@ -95,7 +95,7 @@ export function NavigationMenuBar(props: any): React.JSX.Element {
                       className=" text-blue-800"
                       key={component.title}
                       title={component.title}
-                      href={`${component.href}/`}
+                      href={`${component.href}`}
                     >
                       {" "}
                       {component.description}
