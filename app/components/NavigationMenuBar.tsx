@@ -21,34 +21,34 @@ import GetSession from "./GetSession";
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "For Kids",
-    href: "programmes",
+    href: "programmes/",
     description:
       "Teaching kids specifically how to read, write, and memorize the Quran",
   },
   {
     title: "For Aduls",
-    href: "programmes",
+    href: "programmes/",
     description: "Teaching Aduls how to read, write, and memorize the Quran",
   },
   {
     title: "For Women",
-    href: "programmes",
+    href: "programmes/",
     description: "Female teachers dedicated to teaching women",
   },
   {
     title: " Ijazah course ",
-    href: "programmes",
+    href: "programmes/",
     description: " The type of Ijazah that we giving to our Students ",
   },
   {
     title: "Tabs",
-    href: "programmes",
+    href: "programmes/",
     description:
       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
   },
   {
     title: " Quranic Arabic ",
-    href: "programmes",
+    href: "programmes/",
     description: " Quranic Arabic ",
   },
 ];

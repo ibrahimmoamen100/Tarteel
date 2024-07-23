@@ -2,11 +2,7 @@ import React from "react";
 import { TracingBeamDemo } from "../components/TracingBar";
 
 function Programmes() {
-  return (
-    <div>
-      <TracingBeamDemo />
-    </div>
-  );
+  return <div>hello world </div>;
 }
 
 export default Programmes;
